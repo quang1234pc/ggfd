@@ -10,7 +10,7 @@ end)
 _G.WhiteListed = true
 if _G.WhiteListed then
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Ayaka Hub", "DarkTheme", colors)
+local Window = Library.CreateLib("KimisatoAyaka Hub", "DarkTheme", colors)
 
 local Tab = Window:NewTab("Underrated Farm")
 local Tab2 = Window:NewTab("Teleport/Server")
