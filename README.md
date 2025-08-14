@@ -378,19 +378,22 @@ KPSection4:NewToggle("Hobby Camp" , "Kills Player", function(state)
 if state then
 _G.AutoHobby = true
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Hobby)
-local vp = x.VTCrv
+local vp = x.VTCebvc
 while _G.AutoHobby do
-    wait(0.1)
+    wait(0.01)
+    pcall(function()
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
-            game:GetService("Players").LocalPlayer.Character.Powers.Hobby.RemoteEvent:FireServer(vp,"HobbyPower2", "StopCharging",v.HumanoidRootPart.CFrame,workspace.IslandCaver.Stones.Stone,100)
+            game:GetService("Players").LocalPlayer.Character.Powers.Hobby.RemoteEvent:FireServer(vp,"HobbyPower2", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
         end
-        end
- end
+    end
+    end)
+    end
 else
     _G.AutoHobby = false
- end
+end
 end)
+
 ----------------------------------- FruitFarming
 FFarmingSection2:NewToggle("Quake Farm" , "Kills every NPCS", function(state)  --Quake
 if state then
