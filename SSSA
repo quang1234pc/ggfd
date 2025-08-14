@@ -1,4 +1,0 @@
-local player = game:GetService(“Player”) 
-
-player.character:WaitForChild(“Humanoid”) += 1000000000000000
-
