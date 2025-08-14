@@ -379,7 +379,7 @@ if state then
 _G.AutoLight = true
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Hobby)
 local vp = x.VTCrv
-while _G.AutoLight do
+while _G.AutoHobby do
     wait(0.001)
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
