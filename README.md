@@ -384,7 +384,7 @@ while _G.AutoHobby do
     pcall(function()
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
-            game:GetService("Players").LocalPlayer.Character.Powers.Hobby.RemoteEvent:FireServer(vp,"HobbyPower2", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
+            game:GetService("Players").LocalPlayer.Character.Powers.Hobby.RemoteEvent:FireServer(vp,"HobbyPower2", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 255.2558080255255, -103.8988037109375))
         end
     end
     end)
