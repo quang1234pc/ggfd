@@ -342,7 +342,7 @@ _G.AutoLight = true
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Light)
 local vp = x.VTCrv
 while _G.AutoLight do
-    wait(0.00000001)
+    wait(0.001)
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
             game:GetService("Players").LocalPlayer.Character.Powers.Light.RemoteEvent:FireServer(vp,"LightPower2", "StopCharging",v.HumanoidRootPart.CFrame,workspace.IslandCaver.Stones.Stone, 100)
