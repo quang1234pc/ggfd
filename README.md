@@ -38,6 +38,7 @@ local FFarmingSection2 = Tab5:NewSection("Quake Fruit")
 local FFarmingSection3 = Tab5:NewSection("Mob Bring")
 local KPSection = Tab3:NewSection("Players")
 local KPSection2 = Tab3:NewSection("Quake Fruit")
+local KPSection4 = Tab3:NewSection("Hobby Fruit")
 local KPSection3 = Tab3:NewSection("Light Fruit")
 local MiscSection = Tab9:NewSection("Random Stuff")
 local WeaponSection1 = Tab4:NewSection("Yoru")
@@ -371,6 +372,24 @@ while _G.AutoQuake do
 else
     _G.AutoQuake = false
 end
+end)
+
+KPSection4:NewToggle("Hobby Camp" , "Kills Player", function(state)
+if state then
+_G.AutoLight = true
+local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Hobby)
+local vp = x.VTCrv
+while _G.AutoLight do
+    wait(0.001)
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+        if v.Name == Choose2 then
+            game:GetService("Players").LocalPlayer.Character.Powers.Hobby.RemoteEvent:FireServer(vp,"HobbyPower2", "StopCharging",v.HumanoidRootPart.CFrame,workspace.IslandCaver.Stones.Stone, 100)
+        end
+        end
+ end
+else
+    _G.AutoHobby = false
+ end
 end)
 ----------------------------------- FruitFarming
 FFarmingSection2:NewToggle("Quake Farm" , "Kills every NPCS", function(state)  --Quake
