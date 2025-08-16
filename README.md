@@ -359,7 +359,7 @@ _G.AutoQuake = true
 local x = getsenv(game:GetService("Players").LocalPlayer.Character.Powers.Quake)
 local vp = x.VTCebvc
 while _G.AutoQuake do
-    wait(0.03)
+    wait(0.05)
     pcall(function()
     for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
         if v.Name == Choose2 then
