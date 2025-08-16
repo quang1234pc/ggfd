@@ -520,7 +520,7 @@ while _G.BringMob do
     game:GetService("Workspace").Enemies["Lv24 Thug"].HumanoidRootPart.CFrame = CFrame.new(6654, 418, -1468)
     game:GetService("Workspace").Enemies["Lv30 Thug"].HumanoidRootPart.CFrame = CFrame.new(6654, 418, -1468)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6670, 418, -1468)
-    wait(0.1)
+    wait(0.5)
     end
     else
     _G.BringMob = false
@@ -602,14 +602,14 @@ for i,v in pairs(game:GetService("Workspace").Barrels.Barrels:GetDescendants()) 
 if v.Name == "Barrel" then
 game.workspace[""..user].HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0, 5, 0)
 amongus()
-wait(0.1)
+wait(0.5)
 end
 end
 for i,v in pairs(game:GetService("Workspace").Barrels:GetDescendants()) do
 if v.Name == "Crate" then
 game.workspace[""..user].HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0, 5, 0)
 amongus()
-wait(0.1)
+wait(0.5)
 end
 end
 game.workspace[""..user].HumanoidRootPart.CFrame = StoredLocation
