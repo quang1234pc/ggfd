@@ -29,7 +29,6 @@ local SkillSection2 = Tab6:NewSection("Auto SKill Devil Fruit 2")
 local HakiSection = Tab:NewSection("Haki Farming")
 local HakiSection2 = Tab:NewSection("Chest Farming")
 local HakiSection3 = Tab:NewSection("Auto Farm Alt")
-local WeaponSection3 = Tab4:NewSection("Get Fake Weapon")
 local TPSection = Tab2:NewSection("Teleports/Check")
 local SamSection = Tab7:NewSection("Sam Quests/Fruit and Compass Stealing")
 local DrinkingSection = Tab8:NewSection("Drinks/Farming Stats")
@@ -1239,54 +1238,6 @@ for i = 1,5 do
        end
     )
     
-    WeaponSection3:NewButton("Seastone Cestus", "Get Seastone Cestus Fake", function()
-    local Players = game:GetService("Players")
-    local cache = {}
-    function lol(name)
-        if cache[name] then return cache[name] end
-        local player = Players:FindFirstChild(name)
-        if player then
-            cache[name] = player.UserId
-            return player.UserId
-        end 
-    
-        local id
-        pcall(function ()
-            id = Players:lol(name)
-        end)
-        cache[name] = id
-        return id
-    end
-    local ehh = game.Players.LocalPlayer.Name
-    local Final = lol(ehh)
-    local A_1 = "Seastone Cestus"
-    local Event = game:GetService("Workspace").UserData["User_"..Final].UpdateMelee
-    Event:FireServer(A_1)
-    end)
-WeaponSection3:NewButton("Aqua Staff", "Get Aqua Staff", function()
-   local Players = game:GetService("Players")
-    local cache = {}
-    function lol(name)
-        if cache[name] then return cache[name] end
-        local player = Players:FindFirstChild(name)
-        if player then
-            cache[name] = player.UserId
-            return player.UserId
-        end 
-    
-        local id
-        pcall(function ()
-            id = Players:lol(name)
-        end)
-        cache[name] = id
-        return id
-    end
-    local ehh = game.Players.LocalPlayer.Name
-    local Final = lol(ehh)
-    local A_1 = "Aqua Staff"
-    local Event = game:GetService("Workspace").UserData["User_"..Final].UpdateMelee
-    Event:FireServer(A_1)
-    end)
 ----------------------------------- Teleports
 TPSection:NewDropdown("Island Teleports", "Teleports you to chosen island", {"Windmill", "Race Track" , "Bar" ,"Cave", "Marine Fort" ,"Sam", "Krizma", "Cannon Dealer Island" , "Expertise", "Mansion" , "Trees Island" , "Dead Mountain", "Pyramid", "Snow Mountain", "Little Snow Island", "Vokun", "Kaizu", "Purple", "Pursuer", "Safe Place"}, function(currentOption)
 if currentOption == "Expertise" then
