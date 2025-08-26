@@ -113,30 +113,6 @@ end
 end)
 ----------------------------------- Misc
 
-MiscSection:NewToggle("Anti Stun", "Remove Disable,Heart,Hobby,Chilly,Candy,Hollow,Ope,Snow,Rumble,Gra", false, function(bool)
-        getgenv().antistun = bool
-        while getgenv().antistun do wait()
-            pcall(function()
-                local hoangashdeptrai = game.Players.LocalPlayer.Character
-    repeat
-    hoangashdeptrai["DF_Disabled"].Value = false
-    hoangashdeptrai.HeartStolen.Value = true
-    hoangashdeptrai.Returned.Value = false
-    hoangashdeptrai.Hobbied.Value = false
-    hoangashdeptrai.HMS.Value = false
-    hoangashdeptrai.ChillyPunched.Value = false
-    hoangashdeptrai.CandyTouched.Value = false
-    hoangashdeptrai.Negative.Value = false
-    hoangashdeptrai.OpeSevered.Value = false
-    hoangashdeptrai.SnowTouched.Value = false
-    hoangashdeptrai.RumbleStun.Value = false
-    hoangashdeptrai.GravityCrushed.Value = false
-    wait(0.06)
-    until hoangashdeptrai.Humanoid.Health == 0
-    end)
-    end
-    end)
-
 MiscSection:NewButton("Anti-staff", "Kicks if a staff is in server or joins server", function()
 local Pedo = {
     1135910299,520944,43247021,2350183594
